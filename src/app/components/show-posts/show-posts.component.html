@@ -1,9 +1,9 @@
 <div *ngFor="let post of posts | async">
-  <div  class="box text-center">
-    <div class="w-100">
-      <h4 class="mb-1">{{ post.title}}</h4>
+  <div  class="box">
+    <div class="w-100 title">
+      <h3 class="mb-1">{{ post.title}}</h3>
     </div>
-    <p><strong>Job Details : </strong>{{ post.detail }}</p>
+    <p><strong>Details : </strong>{{ post.detail }}</p>
     <p><strong>Skills Required : </strong>{{ post.skills }}</p>
     <small>{{post.time.toDate()}}</small>
   </div>

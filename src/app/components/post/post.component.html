@@ -4,7 +4,7 @@
      <input type="text" #title class="form-control up" placeholder="Title" required>
      <input type="text" #detail class="form-control mid" placeholder="Description" required>
      <input type="text" #skills class="form-control low" placeholder="Skills Requirede" required>
-     <button type="button" class="btn btn-lg btn-primary btn-block login-btn" (click)="postJob(title.value, detail.value, skills.value)">Post</button>
+     <button type="button" class="btn btn-lg btn-block" (click)="postJob(title.value, detail.value, skills.value)">Post</button>
      <a href="#" routerLink="/home">
           Home 🏠
      </a>

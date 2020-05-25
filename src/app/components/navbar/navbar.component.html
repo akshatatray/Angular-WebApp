@@ -1,20 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-dark text-center fixed-top">
-  <a class="navbar-brand" href="#">Angular</a>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top text-center">
+  <a class="navbar-brand" href="#" routerLink="/home">Angular</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item" id="home">
-        <a class="nav-link" href="#" routerLink="/home">Home</a>
+        <a class="nav-link" href="#" routerLink="/home">
+          <img src="https://img.icons8.com/fluent/20/000000/home.png"/>
+          Home
+        </a>
       </li>
       <li class="nav-item" id="post">
-        <a class="nav-link" href="#" routerLink="/post">Post</a>
+        <a class="nav-link" href="#" routerLink="/post">
+          <img src="https://img.icons8.com/fluent/20/000000/create-new.png"/>
+          Post
+        </a>
       </li>
       <li class="nav-item" id="profile">
-        <a class="nav-link" href="#" routerLink="/profile">Profile</a>
+        <a class="nav-link" href="#" routerLink="/profile">
+          <img src="https://img.icons8.com/color/20/000000/test-account.png"/>
+          Profile
+        </a>
       </li>
     </ul>
-    <button class="btn btn-danger" type="submit" (click)="auth.logout()">Logout</button>
+    <button class="btn btn-danger btn-lg" type="submit" (click)="auth.logout()">Logout</button>
   </div>
 </nav>

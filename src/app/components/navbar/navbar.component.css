@@ -1,9 +1,25 @@
 .navbar{
-     background: #24292e;
+     background: linear-gradient(45deg, var(--nav1), var(--nav2));
+     font-weight: bolder;
+     margin-bottom: 5px;
 }
 .dropdown-menu{
      position: relative;
      margin: auto;
      width: 100%;
      max-width: 340px;
+}
+img{
+     margin-top: -5px;
+}
+a {
+     margin-top: 5px;
+     margin-right: 20px;
+     font-family: 'Roboto Condensed', sans-serif;
+     font-size: 20px;
+     color: white;
+}
+.btn {
+     margin-top: 5px;
+     font-family: 'Roboto Condensed', sans-serif;
 }

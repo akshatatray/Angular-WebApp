@@ -18,6 +18,7 @@ import { AuthService } from './services/auth.service';
 import { EditComponent } from './components/edit/edit.component';
 import { PostComponent } from './components/post/post.component';
 import { ShowPostsComponent } from './components/show-posts/show-posts.component';
+import { ThemeChangerComponent } from './components/theme-changer/theme-changer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ShowPostsComponent } from './components/show-posts/show-posts.component
     EditComponent,
     PostComponent,
     ShowPostsComponent,
+    ThemeChangerComponent,
   ],
   imports: [
     BrowserModule,

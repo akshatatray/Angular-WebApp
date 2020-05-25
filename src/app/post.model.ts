@@ -3,4 +3,5 @@ export interface Post {
      detail: string;
      skills: string;
      time: any;
+     user: string;
 }

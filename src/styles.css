@@ -1,0 +1,33 @@
+body{
+     margin: 0;
+     padding: 0;
+     background: var(--bg);
+}
+.dark {
+     --bg: #242424;
+     --bg1: #202020;
+     --heading: #ffffff;
+     --text: rgb(250, 255, 230);
+     --link1: #0099ff;
+     --link2: #00c382;
+     --nav1: #282828;
+     --nav2: #484848;
+     --btn1: #0f9a65;
+     --btn2: #045946;
+     --bd: #fae042;
+     --theme: rgba(255, 143, 79, 0.883);
+}
+.light{
+     --bg: #e2ffd9;
+     --bg1: #d1f1c7;
+     --heading: #000000;
+     --text: #0e1e30;
+     --link1: #007acc;
+     --link2: #00a870;
+     --nav1: rgba(0,143,104);
+     --nav2: rgba(107, 183, 86);
+     --btn1: #007bff;
+     --btn2: #0060c7;
+     --bd: #402fb6;
+     --theme: rgb(19, 19, 70);
+}

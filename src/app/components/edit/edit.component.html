@@ -1,9 +1,10 @@
+<app-navbar></app-navbar>
 <form class="form-signin text-center">
      <h1 class="display-5">Update Profile</h1>
      <input type="text" #skills class="form-control up" placeholder="Skills" required>
      <input type="text" #college class="form-control mid" placeholder="College" required>
      <input type="text" #year class="form-control low" placeholder="Year" required>
-     <button type="button" class="btn btn-lg btn-primary btn-block login-btn" (click)="setUserData(skills.value, college.value, year.value)">Update Profile</button>
+     <button type="button" class="btn btn-lg btn-block login-btn" (click)="setUserData(skills.value, college.value, year.value)">Update Profile</button>
      <a href="#" routerLink="/profile">
           Want to Go Back 🔙
      </a>
