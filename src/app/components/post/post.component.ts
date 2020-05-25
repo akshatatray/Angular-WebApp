@@ -3,6 +3,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-post',
@@ -28,7 +29,8 @@ export class PostComponent implements OnInit {
         const postData = {
           title: title,
           detail: detail,
-          skills: skills
+          skills: skills,
+          time: firebase.firestore.Timestamp.fromDate(new Date())
         }
         postRef.set(postData, {
           merge: true

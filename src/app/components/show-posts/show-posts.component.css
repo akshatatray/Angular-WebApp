@@ -4,3 +4,12 @@
 p {
      margin-bottom: 1.5rem;
 }
+.box {
+     position: relative;
+     color: white;
+     background: darkslategrey;
+     width: 100%;
+     max-width: 380px;
+     margin: auto;
+     margin-bottom: 1rem;
+}
