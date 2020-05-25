@@ -1,5 +1,5 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
@@ -25,16 +25,17 @@ export class PostComponent implements OnInit {
   postJob(title, detail, skills) {
     this.afAuth.onAuthStateChanged((user) => {
       if (user) {
-        const postRef: AngularFirestoreDocument<any> = this.afs.doc(`posts/${user.uid}`);
+        const uid = user.uid;
+        const postRef: AngularFirestoreCollection<any> = this.afs.collection(`posts`);
         const postData = {
           title: title,
           detail: detail,
           skills: skills,
-          time: firebase.firestore.Timestamp.fromDate(new Date())
+          time: firebase.firestore.Timestamp.fromDate(new Date()),
+          user: uid
         }
-        postRef.set(postData, {
-          merge: true
-        }).then((result) => {
+        console.log(uid);
+        postRef.add(postData).then((result) => {
           this.ngZone.run(() => {
             this.router.navigate(['home']);
           });
