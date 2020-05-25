@@ -2,6 +2,7 @@ body{
      margin: 0;
      padding: 0;
      background: var(--bg);
+     transition: background 0.5s linear;
 }
 .dark {
      --bg: #242424;
@@ -12,8 +13,8 @@ body{
      --link2: #00c382;
      --nav1: #282828;
      --nav2: #484848;
-     --btn1: #0f9a65;
-     --btn2: #045946;
+     --btn1: #007bff;
+     --btn2: #0060c7;
      --bd: #fae042;
      --theme: rgba(255, 143, 79, 0.883);
 }
@@ -26,8 +27,8 @@ body{
      --link2: #00a870;
      --nav1: rgba(0,143,104);
      --nav2: rgba(107, 183, 86);
-     --btn1: #007bff;
-     --btn2: #0060c7;
+     --btn1: #0f9a65;
+     --btn2: #045946;
      --bd: #402fb6;
      --theme: rgb(19, 19, 70);
 }

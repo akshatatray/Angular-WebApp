@@ -1,5 +1,6 @@
 .navbar{
      background: linear-gradient(45deg, var(--nav1), var(--nav2));
+     transition: background 0.35s linear;
      font-weight: bolder;
      margin-bottom: 5px;
 }
@@ -11,6 +12,7 @@
 }
 img{
      margin-top: -5px;
+     border-radius: 50%;
 }
 a {
      margin-top: 5px;

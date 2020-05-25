@@ -12,6 +12,7 @@ p {
      border-radius: 0.5rem;
      color: white;
      background: var(--bg1);
+     transition: background 0.25s linear;
      width: 100%;
      max-width: 370px;
      margin: auto;
