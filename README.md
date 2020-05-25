@@ -1,4 +1,7 @@
-# AngularApp
+#App URL
+http://angular-b446a.web.app/
+
+## AngularApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
 
