@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "freelance-17560": {
+      "hosting": {
+        "angular-app": [
+          "freelance-17560"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-b446a"
+  }
+}

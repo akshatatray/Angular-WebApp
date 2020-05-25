@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="container">
+     <div *ngIf="userData as users" class="us">
+          <h1 class="display-5 text-center">Profile</h1>
+          <div class="text-center">
+               <img src="{{users.photoURL}}" width="120px" height="120px">
+          </div>
+          <h2>Name: <strong>{{users.displayName}}</strong></h2>
+          <h2>Email: <strong>{{users.email}}</strong></h2>
+          <h2>Skills: <strong>{{users.skills}}</strong></h2>
+          <h2>College: <strong>{{users.college}}</strong></h2>
+          <h2>Year: <strong>{{users.year}}</strong></h2>
+     </div>
+     <button class="btn btn-lg btn-primary btn-block" routerLink="/edit">Edit Profile</button>
+</div>
