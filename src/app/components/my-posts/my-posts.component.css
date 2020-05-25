@@ -1,0 +1,25 @@
+p {
+     margin-bottom: 1rem;
+     border-bottom: 1px dashed var(--heading);
+     font-size: 20px;
+}
+.container {
+     margin-top: 5rem;
+}
+.title {
+     margin-bottom: 2rem;
+     border-bottom: 1px solid var(--heading);
+}
+.box {
+     position: relative;
+     border-radius: 0.5rem;
+     color: white;
+     background: var(--bg1);
+     transition: background 0.25s linear;
+     width: 100%;
+     max-width: 370px;
+     margin: auto;
+     margin-bottom: 1rem;
+     padding: 20px;
+     color: var(--heading);
+}

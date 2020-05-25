@@ -14,12 +14,8 @@ export class ShowPostsComponent implements OnInit {
   posts: Observable<Post[]>;
 
   constructor(private afs: AngularFirestore) {
-    this.postCollection = afs.collection<Post>('posts');
+    this.postCollection = afs.collection('posts');
     this.posts = this.postCollection.valueChanges();
-  }
-
-  showPost(post: Post){
-    this.postCollection.add(post);
   }
 
   ngOnInit() {

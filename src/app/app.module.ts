@@ -19,6 +19,7 @@ import { EditComponent } from './components/edit/edit.component';
 import { PostComponent } from './components/post/post.component';
 import { ShowPostsComponent } from './components/show-posts/show-posts.component';
 import { ThemeChangerComponent } from './components/theme-changer/theme-changer.component';
+import { MyPostsComponent } from './components/my-posts/my-posts.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ThemeChangerComponent } from './components/theme-changer/theme-changer.
     PostComponent,
     ShowPostsComponent,
     ThemeChangerComponent,
+    MyPostsComponent,
   ],
   imports: [
     BrowserModule,
