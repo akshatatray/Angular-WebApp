@@ -23,3 +23,10 @@ p {
      padding: 20px;
      color: var(--heading);
 }
+span {
+     position: relative;
+     font-size: 16px;
+     top: 10px;
+     left: 290px;
+     color: var(--heading);
+}

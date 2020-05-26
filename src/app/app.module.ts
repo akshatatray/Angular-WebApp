@@ -40,7 +40,7 @@ import { MyPostsComponent } from './components/my-posts/my-posts.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule,
+    AngularFirestoreModule.enablePersistence(),
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

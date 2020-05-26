@@ -5,7 +5,9 @@ p {
 }
 .title {
      margin-bottom: 2rem;
-     border-bottom: 1px solid var(--heading);
+     background: var(--bg2);
+     border-radius: 0.35rem;
+     padding: 5px;
 }
 .box {
      position: relative;

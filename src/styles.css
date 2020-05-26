@@ -5,8 +5,9 @@ body{
      transition: background 0.5s linear;
 }
 .dark {
-     --bg: #242424;
+     --bg: #252525;
      --bg1: #202020;
+     --bg2: #1b1b1b;
      --heading: #ffffff;
      --text: rgb(250, 255, 230);
      --link1: #0099ff;
@@ -21,6 +22,7 @@ body{
 .light{
      --bg: #e2ffd9;
      --bg1: #d1f1c7;
+     --bg2: #98ce89;
      --heading: #000000;
      --text: #0e1e30;
      --link1: #007acc;
