@@ -25,3 +25,10 @@ a {
      margin-top: 5px;
      font-family: 'Roboto Condensed', sans-serif;
 }
+.nav-link {
+     color: var(--heading);
+}
+.material-icons {
+     color: var(--heading);
+     font-size: 2.2rem;
+}

@@ -1,15 +1,18 @@
 <app-navbar></app-navbar>
 <div class="container">
      <div *ngIf="userData as users" class="us">
-          <h1 class="display-5 text-center">Profile</h1>
-          <div class="text-center">
-               <img src="{{users.photoURL}}" width="100px" height="100px">
+          <img src="{{users.photoURL}}" width="100px" height="100px">
+          <h1><strong>{{users.displayName}}</strong></h1>
+          <div class="details">
+               <p class="outside">Email</p>
+               <p class="inside">{{users.email}}</p>
+               <p class="outside">Skills</p>
+               <p class="inside">{{users.skills}}</p>
+               <p class="outside">College</p>
+               <p class="inside">{{users.college}}</p>
+               <p class="outside">Year</p>
+               <p class="inside">{{users.year}}</p>
           </div>
-          <p>Name: <strong>{{users.displayName}}</strong></p>
-          <p>Email: <strong>{{users.email}}</strong></p>
-          <p>Skills: <strong>{{users.skills}}</strong></p>
-          <p>College: <strong>{{users.college}}</strong></p>
-          <p>Year: <strong>{{users.year}}</strong></p>
      </div>
      <button class="btn btn-lg btn-block" routerLink="/edit">Edit Profile</button>
 </div>

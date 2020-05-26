@@ -15,4 +15,14 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  change() {
+    const drop = document.getElementById('drop').innerHTML;
+    if (drop == 'arrow_drop_down') {
+      document.getElementById('drop').innerHTML = 'arrow_drop_up';
+    }
+    else if (drop == 'arrow_drop_up') {
+      document.getElementById('drop').innerHTML = 'arrow_drop_down';
+    }
+  }
+
 }
