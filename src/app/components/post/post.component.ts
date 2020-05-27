@@ -22,9 +22,29 @@ export class PostComponent implements OnInit {
   ngOnInit() {
   }
 
+  day(n:number) {
+    if (n==0) {
+      return 'Monday';
+    } else if (n==1) {
+      return 'Tuesday';
+    } else if (n==2) {
+      return 'Wednesday';
+    } else if (n==3) {
+      return 'Thursday';
+    } else if (n==4) {
+      return 'Friday';
+    } else if (n==5) {
+      return 'Saturday';
+    } else if (n==6) {
+      return 'Sunday';
+    }
+  }
+
   postJob(title, detail, skills) {
     this.afAuth.onAuthStateChanged((user) => {
       if (user) {
+        const d = new Date();
+        const n = d.getDay();
         const uid = user.uid;
         const postRef: AngularFirestoreCollection<any> = this.afs.collection(`posts`);
         const postData = {
@@ -32,6 +52,7 @@ export class PostComponent implements OnInit {
           detail: detail,
           skills: skills,
           time: firebase.firestore.Timestamp.fromDate(new Date()),
+          day: this.day(n),
           user: uid
         }
         console.log(uid);

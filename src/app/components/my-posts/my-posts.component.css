@@ -1,14 +1,25 @@
-p {
-     margin-bottom: 1rem;
-     border-bottom: 1px dashed var(--heading);
-     font-size: 20px;
-}
 .container {
      margin-top: 5rem;
 }
+.inside {
+     margin-bottom: 1rem;
+     background: var(--bg2);
+     border-radius: 0.35rem;
+     padding: 8px;
+     font-family: 'Roboto Condensed', sans-serif;
+     font-size: 20px;
+}
+.outside {
+     margin-bottom: 0;
+     margin-top: 2rem;
+     font-size: 16px;
+     color: var(--heading);
+     font-family: 'Montserrat', sans-serif;
+}
 .title {
      margin-bottom: 2rem;
-     border-bottom: 1px solid var(--heading);
+     font-family: 'Montserrat', sans-serif;
+     font-size: 2rem;
 }
 .box {
      position: relative;
@@ -17,16 +28,37 @@ p {
      background: var(--bg1);
      transition: background 0.25s linear;
      width: 100%;
-     max-width: 370px;
+     max-width: 380px;
      margin: auto;
      margin-bottom: 1rem;
      padding: 20px;
      color: var(--heading);
+     box-shadow: -5px 5px 15px -5px rgb(0, 0, 0);
 }
-span {
-     position: relative;
-     font-size: 16px;
-     top: 0.8rem;
+.details {
+     margin-top: 1.5rem;
+}
+.bin {
+     position: absolute;
+     top: 18rem;
      left: 16rem;
      color: var(--heading);
+}
+.edit {
+     position: absolute;
+     top: 18rem;
+     left: 18rem;
+     color: var(--heading);
+}
+.dropdown-menu {
+     width: 250px;
+     background: var(--bg);
+     padding: 5px;
+}
+input {
+     height: 3rem;
+     margin-bottom: 5px;
+}
+.edit-btn {
+     height: 3rem;
 }

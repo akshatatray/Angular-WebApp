@@ -2,15 +2,28 @@
 <div class="container">
      <div *ngFor="let post of posts | async">
           <div  class="box">
-               <div class="w-100 title">
-                    <h3 class="mb-1">{{ post.title}}</h3>
+               <div class="w-100">
+                    <p class="mb-1 title text-center">{{ post.title}}</p>
                </div>
-               <p><strong>Details : </strong>{{ post.detail }}</p>
-               <p><strong>Skills Required : </strong>{{ post.skills }}</p>
-               <small>{{post.time.toDate()}}</small>
-               <span class="material-icons"  (click)="showId(post.id)">
-                    delete
-               </span>
+               <div class="details">
+                    <p class="outside">Details :</p>
+                    <p class="inside">{{ post.detail }}</p>
+                    <p class="outside">Skills Required</p>
+                    <p class="inside">{{ post.skills }}</p>
+                    <p>Posted On {{ post.day }}</p>
+                    <span class="bin material-icons"  (click)="showId(post.id)">
+                         delete
+                    </span>
+                    <span class="edit material-icons" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         edit
+                    </span>
+                    <div class="dropdown-menu">
+                         <input type="text" #title class="form-control up" placeholder="Title" required>
+                         <input type="text" #details class="form-control mid" placeholder="Details" required>
+                         <input type="text" #skills class="form-control low" placeholder="Skills Required" required>
+                         <button type="button" class="btn btn-block btn-success edit-btn" (click)="display(post.id, title.value, details.value, skills.value)">Edit Post</button>
+                    </div>
+               </div>
           </div>
      </div>
 </div>

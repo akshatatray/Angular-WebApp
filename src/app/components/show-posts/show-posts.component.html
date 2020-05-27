@@ -1,9 +1,14 @@
 <div *ngFor="let post of posts | async">
   <div  class="box">
-    <div class="w-100 title">
-      <h3 class="mb-1 text-center">{{ post.title}}</h3>
+    <div class="w-100">
+      <p class="mb-1 title text-center">{{ post.title}}</p>
     </div>
-    <p><strong>Details : </strong>{{ post.detail }}</p>
-    <p><strong>Skills Required : </strong>{{ post.skills }}</p>
+    <div class="details">
+      <p class="outside">Details :</p>
+      <p class="inside">{{ post.detail }}</p>
+      <p class="outside">Skills Required</p>
+      <p class="inside">{{ post.skills }}</p>
+      <p>Posted On {{ post.day }}</p>
+    </div>
   </div>
 </div>

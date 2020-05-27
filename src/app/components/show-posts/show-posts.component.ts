@@ -7,6 +7,7 @@ export interface Post {
   title: string;
   detail: string;
   skills: string;
+  day: string;
   time: any;
   user: string;
 }

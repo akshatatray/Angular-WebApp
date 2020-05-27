@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -10,6 +10,7 @@ export interface Post {
   skills: string;
   time: any;
   user: string;
+  day: string;
 }
 export interface PostId extends Post {
   id: string;
@@ -58,6 +59,16 @@ export class MyPostsComponent implements OnInit {
       console.log("DELETED SUCCESSFULLY!");
     })
     console.log(postId);
+  }
+
+  display(postid, title, details, skills) {
+    const postRef: AngularFirestoreDocument<any> = this.afs.collection(`posts`).doc(postid);
+    const postData = {
+      title: title,
+      detail: details,
+      skills: skills,
+    }
+    postRef.update(postData);
   }
 
 }
