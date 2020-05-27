@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { Observable } from 'rxjs';
+import { Observable, merge } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 export interface Post {
@@ -61,14 +61,26 @@ export class MyPostsComponent implements OnInit {
     console.log(postId);
   }
 
-  display(postid, title, details, skills) {
+  updateTitle(postid, title) {
     const postRef: AngularFirestoreDocument<any> = this.afs.collection(`posts`).doc(postid);
     const postData = {
-      title: title,
-      detail: details,
-      skills: skills,
+      title: title
     }
-    postRef.update(postData);
+    postRef.set(postData , {merge: true} );
+  }
+  updateDetail(postid, details) {
+    const postRef: AngularFirestoreDocument<any> = this.afs.collection(`posts`).doc(postid);
+    const postData = {
+      detail: details
+    }
+    postRef.set(postData , {merge: true} );
+  }
+  updateSkills(postid, skills) {
+    const postRef: AngularFirestoreDocument<any> = this.afs.collection(`posts`).doc(postid);
+    const postData = {
+      skills: skills
+    }
+    postRef.set(postData , {merge: true} );
   }
 
 }
