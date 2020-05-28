@@ -20,6 +20,8 @@ import { PostComponent } from './components/post/post.component';
 import { ShowPostsComponent } from './components/show-posts/show-posts.component';
 import { ThemeChangerComponent } from './components/theme-changer/theme-changer.component';
 import { MyPostsComponent } from './components/my-posts/my-posts.component';
+import { PostWIdComponent } from './components/post-w-id/post-w-id.component';
+import { ContactUserComponent } from './components/contact-user/contact-user.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { MyPostsComponent } from './components/my-posts/my-posts.component';
     ShowPostsComponent,
     ThemeChangerComponent,
     MyPostsComponent,
+    PostWIdComponent,
+    ContactUserComponent,
   ],
   imports: [
     BrowserModule,

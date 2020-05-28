@@ -22,7 +22,7 @@ export interface PostId extends Post {
 })
 export class ShowPostsComponent {
 
-  private postCollection: AngularFirestoreCollection<Post>;
+  public postCollection: AngularFirestoreCollection<Post>;
   posts: Observable<PostId[]>;
 
   constructor(private readonly afs: AngularFirestore) {

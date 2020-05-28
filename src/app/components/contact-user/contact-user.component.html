@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<div class="container">
+     <div *ngIf="user$ | async as users" class="us">
+          <img src="{{users.photoURL}}" width="100px" height="100px">
+          <h1><strong>{{users.displayName}}</strong></h1>
+          <div class="details">
+               <p class="outside">Email</p>
+               <p class="inside">{{users.email}}</p>
+               <p class="outside">Skills</p>
+               <p class="inside">{{users.skills}}</p>
+               <p class="outside">College</p>
+               <p class="inside">{{users.college}}</p>
+               <p class="outside">Year</p>
+               <p class="inside">{{users.year}}</p>
+          </div>
+     </div>
+</div>

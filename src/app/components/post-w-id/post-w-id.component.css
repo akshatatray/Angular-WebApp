@@ -1,0 +1,38 @@
+.inside {
+     margin-bottom: 1rem;
+     background: var(--bg2);
+     border-radius: 0.35rem;
+     padding: 8px;
+     font-family: 'Roboto Condensed', sans-serif;
+     font-size: 20px;
+}
+.outside {
+     margin-bottom: 0;
+     margin-top: 2rem;
+     font-size: 16px;
+     color: var(--heading);
+     font-family: 'Montserrat', sans-serif;
+}
+.title {
+     margin-bottom: 2rem;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 2rem;
+}
+.box {
+     position: relative;
+     border-radius: 0.5rem;
+     color: white;
+     background: var(--bg1);
+     transition: background 0.25s linear;
+     width: 100%;
+     max-width: 380px;
+     margin: auto;
+     margin-bottom: 1rem;
+     margin-top: 5rem;
+     padding: 20px;
+     color: var(--heading);
+     box-shadow: -5px 5px 15px -5px rgb(0, 0, 0);
+}
+.details {
+     margin-top: 1.5rem;
+}

@@ -7,6 +7,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { EditComponent } from './components/edit/edit.component';
 import { PostComponent } from './components/post/post.component';
 import { MyPostsComponent } from './components/my-posts/my-posts.component';
+import { PostWIdComponent } from './components/post-w-id/post-w-id.component';
+import { ContactUserComponent } from './components/contact-user/contact-user.component';
 
 import { AngularFireAuthGuard, redirectUnauthorizedTo, redirectLoggedInTo, emailVerified } from '@angular/fire/auth-guard';
 import { RegisterComponent } from './components/register/register.component';
@@ -22,6 +24,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectLoggedInToHome } },
   { path: 'edit', component: EditComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
   { path: 'post', component: PostComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
+  { path: 'post/:id', component: PostWIdComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
+  { path: 'user/:id', component: ContactUserComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
   { path: 'my/posts', component: MyPostsComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
 ];
 
