@@ -1,7 +1,7 @@
 <div *ngFor="let post of posts | async">
-  <div  class="box">
+  <div  class="box" [routerLink]="['/post', post.id]">
     <div class="w-100">
-      <a class="mb-1 title text-center" [routerLink]="['/post', post.id]">{{ post.title}}</a>
+      <p class="mb-1 title text-center">{{ post.title}}</p>
     </div>
     <div class="details">
       <p class="outside">Details :</p>

@@ -1,8 +1,11 @@
 .navbar{
-     background: linear-gradient(45deg, var(--nav1), var(--nav2));
+     background: linear-gradient(45deg, var(--nav2), var(--nav1));
      transition: background 0.35s linear;
      font-weight: bolder;
      margin-bottom: 5px;
+}
+.navbar-brand {
+     margin-top: 1px;
 }
 .dropdown-menu{
      position: relative;
@@ -14,21 +17,30 @@ img{
      margin-top: -5px;
      border-radius: 50%;
 }
-a {
+.nav-link {
      margin-top: 5px;
      margin-right: 20px;
+     margin-bottom: 0;
      font-family: 'Roboto Condensed', sans-serif;
      font-size: 20px;
-     color: white;
+     color: var(--heading);
 }
 .btn {
      margin-top: 5px;
      font-family: 'Roboto Condensed', sans-serif;
 }
-.nav-link {
-     color: var(--heading);
-}
 .material-icons {
      color: var(--heading);
      font-size: 2.2rem;
+}
+.logo {
+     box-shadow: -5px 5px 15px -5px rgb(0, 0, 0);
+}
+.name {
+     margin-bottom: 0;
+     color: var(--heading);
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 600;
+     font-style: italic;
+     margin-right: 2rem;
 }

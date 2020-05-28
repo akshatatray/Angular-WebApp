@@ -16,6 +16,8 @@
 .title {
      margin-bottom: 2rem;
      font-family: 'Montserrat', sans-serif;
+     font-weight: 700;
+     -webkit-font-smoothing: subpixel-antialiased;
      font-size: 2rem;
 }
 .box {
@@ -35,4 +37,21 @@
 }
 .details {
      margin-top: 1.5rem;
+}
+.contact {
+     margin-top: 2rem;
+     margin-bottom: 2rem;
+}
+.btn {
+     margin-bottom: 2.5rem;
+     height: 3.5rem;
+     background: var(--btn1);
+     color: white;
+     font-weight: 600;
+}
+.btn:hover {
+     background: var(--btn2);
+}
+.date {
+     font-family: 'Roboto Condensed', sans-serif;
 }

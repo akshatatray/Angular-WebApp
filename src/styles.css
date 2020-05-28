@@ -5,15 +5,15 @@ body{
      transition: background 0.5s linear;
 }
 .dark {
-     --bg: #313131;
-     --bg1: #282828;
-     --bg2: #222222;
+     --bg: #282c34;
+     --bg1: #1e2229;
+     --bg2: #16191f;
      --heading: #ffffff;
      --text: rgb(250, 255, 230);
      --link1: #0099ff;
      --link2: #00c382;
-     --nav1: #282828;
-     --nav2: #484848;
+     --nav1: #16191f;
+     --nav2: #282c34;
      --btn1: #007bff;
      --btn2: #0060c7;
      --bd: #fae042;
