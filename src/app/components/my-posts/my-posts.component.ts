@@ -54,11 +54,20 @@ export class MyPostsComponent implements OnInit {
     });
   }
 
-  showId(postId) {
+  deletePost(postId) {
     this.afs.collection('posts').doc(postId).delete().then(function() {
       console.log("DELETED SUCCESSFULLY!");
     })
     console.log(postId);
+  }
+
+  showTitle() {
+    let t = document.getElementById("edit-title");
+    if (t.style.display === "none") {
+      t.style.display = "block";
+    } else {
+      t.style.display = "none";
+    }
   }
 
   updateTitle(postid, title) {

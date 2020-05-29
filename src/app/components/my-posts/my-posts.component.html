@@ -1,50 +1,39 @@
 <app-navbar></app-navbar>
+<div class="container">
      <div *ngFor="let post of posts | async">
-          <div  class="box">
-                    <div class="head-edit">
-                         <p class="title text-center">
-                              {{ post.title}}
-                         </p>
-                         <span class="edit material-icons" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              edit
-                         </span>
-                         <div class="dropdown-menu">
-                              <input type="text" #title class="form-control up" placeholder="Title" required>
-                              <button type="button" class="btn btn-block btn-success edit-btn" (click)="updateTitle(post.id, title.value)">Edit Title</button>
+          <div class="box">
+               <div class="title-box">
+                    <h1 class="title text-center">{{post.title}}</h1>
+                    <div class="drop">
+                         <p class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></p>
+                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <input type="text" #title class="form-control" placeholder="Title" required>
+                              <button class="btn btn-block btn-md" type="button" (click)="updateTitle(post.id, title.value)">Update Title</button>
                          </div>
                     </div>
-               <div class="details">
-                    <div class="detail-edit">
-                         <p class="outside">Details :</p>
-                         <span class="edit material-icons" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              edit
-                         </span>
-                         <div class="dropdown-menu">
-                              <input type="text" #detail class="form-control up" placeholder="Details" required>
-                              <button type="button" class="btn btn-block btn-success edit-btn" (click)="updateDetail(post.id, detail.value)">Edit Details</button>
-                         </div>
-                         <p class="inside">
-                              {{ post.detail }}
-                         </p>
-                    </div>
-                    <div class="skills-edit">
-                         <p class="outside">Skills Required</p> 
-                         <span class="edit material-icons" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              edit
-                         </span>
-                         <div class="dropdown-menu">
-                              <input type="text" #skills class="form-control up" placeholder="Skills" required>
-                              <button type="button" class="btn btn-block btn-success edit-btn" (click)="updateSkills(post.id, skills.value)">Edit Skill</button>
-                         </div>
-                         <p class="inside">
-                              {{ post.skills }}
-                         </p>
-                    </div>
-                    <p>Posted On {{ post.day }}</p>
-                    <span class="bin material-icons"  (click)="showId(post.id)">
-                         delete
-                    </span>
                </div>
+               <div class="detail-box">
+                    <p class="detail">{{post.detail}}</p>
+                    <div class="drop">
+                         <p class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></p>
+                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <input type="text" #detail class="form-control" placeholder="Detail" required>
+                              <button class="btn btn-block btn-md" type="button" (click)="updateDetail(post.id, detail.value)">Update Detail</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="skills-box">
+                    <p class="skills">{{post.skills}}</p>
+                    <div class="drop">
+                         <p class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></p>
+                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <input type="text" #skills class="form-control" placeholder="Skills" required>
+                              <button class="btn btn-block btn-md" type="button" (click)="updateSkills(post.id, skills.value)">Update Skills</button>
+                         </div>
+                    </div>
+               </div>
+               <p class="day"><small>{{post.day}}</small></p>
+               <img src="https://img.icons8.com/material-rounded/24/000000/delete-forever.png" (click)="deletePost(post.id)"/>
           </div>
      </div>
-
+</div>
