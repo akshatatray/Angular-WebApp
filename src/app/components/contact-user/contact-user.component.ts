@@ -35,4 +35,8 @@ export class ContactUserComponent implements OnInit {
     this.user$ = this.afs.doc<User>('users/' + this.id).valueChanges();
   }
 
+  mailUser( mailId ) {
+    window.open('mailto:'+mailId+'?subject=Regarding Job Posting At Campus Lance.');
+  }
+
 }

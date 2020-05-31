@@ -1,7 +1,7 @@
 .container {
      position: relative;
      margin: auto;
-     margin-top: 6.5rem;
+     margin-top: 5rem;
      border-radius: 0.35rem;
      width: 100%;
      max-width: 380px;
@@ -18,6 +18,12 @@
      border-radius: 0.25rem;
      font-family: 'Roboto Condensed', sans-serif;
      box-shadow: inset -5px 5px 50px -35px black;
+}
+.material-icons {
+     color: var(--heading);
+     position: absolute;
+     right: 15px;
+     margin-top: 5px;
 }
 .outside {
      margin-left: 10px;

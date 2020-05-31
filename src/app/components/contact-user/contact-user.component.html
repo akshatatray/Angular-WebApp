@@ -7,7 +7,7 @@
                <p class="outside">Email</p>
                <p class="inside">
                     {{users.email}}
-                    <span class="material-icons">
+                    <span class="material-icons" (click)="mailUser(users.email)">
                          email
                     </span>
                </p>
