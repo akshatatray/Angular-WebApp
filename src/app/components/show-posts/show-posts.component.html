@@ -1,14 +1,14 @@
 <div *ngFor="let post of posts | async">
   <div  class="box" [routerLink]="['/post', post.id]">
     <div class="w-100">
-      <p class="mb-1 title text-center">{{ post.title}}</p>
+      <p class="title text-center">{{ post.title}}</p>
     </div>
     <div class="details">
       <p class="outside">Details :</p>
       <p class="inside">{{ post.detail }}</p>
-      <p class="outside">Skills Required</p>
+      <p class="outside">Skills Required :</p>
       <p class="inside">{{ post.skills }}</p>
-      <p>Posted On {{ post.day }}</p>
+      <p class="date text-center">Posted On {{ post.day }}</p>
     </div>
   </div>
 </div>

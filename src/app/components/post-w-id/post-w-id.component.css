@@ -11,7 +11,8 @@
      margin-top: 2rem;
      font-size: 16px;
      color: var(--heading);
-     font-family: 'Montserrat', sans-serif;
+     letter-spacing: 3px;
+     font-weight: 300;
 }
 .title {
      margin-bottom: 2rem;
@@ -43,15 +44,17 @@
      margin-bottom: 2rem;
 }
 .btn {
-     margin-bottom: 2.5rem;
-     height: 3.5rem;
+     margin-bottom: 0.5rem;
+     margin-top: 0.5rem;
+     height: 3rem;
      background: var(--btn1);
      color: white;
-     font-weight: 600;
+     font-weight: 700;
 }
 .btn:hover {
      background: var(--btn2);
 }
 .date {
-     font-family: 'Roboto Condensed', sans-serif;
+     font-weight: 300;
+     margin-bottom: 0;
 }
