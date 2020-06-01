@@ -41,3 +41,12 @@
 .dropdown-menu {
      position: relative;
 }
+.fa-trash {
+     font-size: 16px;
+     position: absolute;
+     right: 15px;
+     cursor: pointer;
+}
+.fa-trash:hover {
+     color: rgb(128, 0, 0);
+}
