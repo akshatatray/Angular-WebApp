@@ -11,13 +11,13 @@
      transition: background 0.3s linear;
 }
 .inside {
-     font-size: 1.4rem;
+     font-size: 20px;
+     font-weight: 500;
      color: var(--heading);
-     background: var(--bg2);
      padding: 6px;
      border-radius: 0.25rem;
-     font-family: 'Roboto Condensed', sans-serif;
-     box-shadow: inset -5px 5px 50px -35px black;
+     font-family: 'Jost', sans-serif;
+     box-shadow: inset -5px 5px 50px -35px rgba(0, 0, 0, 0.658);
 }
 .material-icons {
      color: var(--heading);
@@ -28,17 +28,18 @@
 .outside {
      margin-left: 10px;
      margin-bottom: 0;
-     font-size: 16px;
+     font-size: 18px;
+     font-weight: 300;
+     letter-spacing: 2px;
      color: var(--heading);
-     font-family: 'Montserrat', sans-serif;
+     font-family: 'Jost', sans-serif;
 }
 h1 {
      font-family: 'Montserrat', sans-serif;
      position: absolute;
      top: 2.2rem;
      left: 7.5rem;
-     margin-bottom: 1rem;
-     font-size: 2rem;
+     font-size: 26px;
      color: var(--heading);
 }
 img {

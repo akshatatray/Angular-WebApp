@@ -4,7 +4,7 @@
      padding: 15px;
      margin: auto;
      margin-top: 3rem;
-     font-family: 'Roboto Condensed', sans-serif;
+     font-family: 'Jost', sans-serif;
      font-weight: bolder;
 }
 .form-signin .form-control {
@@ -24,6 +24,7 @@
      background: var(--btn1);
      color: white;
      font-weight: bolder;
+     letter-spacing: 3px;
 }
 .btn:hover {
      background: var(--btn2);
@@ -51,7 +52,6 @@
 h1 {
      margin-top: 1rem;
      color: var(--heading);
-     font-family: 'Muli', sans-serif;
      font-style: normal;
      -webkit-font-smoothing: antialiased;
      font-size: 45px;

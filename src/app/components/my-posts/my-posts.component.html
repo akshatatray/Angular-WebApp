@@ -3,7 +3,7 @@
      <div *ngFor="let post of posts | async">
           <div class="box">
                <div class="title-box">
-                    <h1 class="title text-center">{{post.title}}</h1>
+                    <h1 class="title">{{post.title}}</h1>
                     <div class="drop">
                          <p class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></p>
                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -32,7 +32,7 @@
                          </div>
                     </div>
                </div>
-               <p class="day"><small>{{post.day}}</small></p>
+               <p class="day text-center"><small>{{post.day}}</small></p>
                <i class="fas fa-trash" (click)="deletePost(post.id)"></i>
           </div>
      </div>

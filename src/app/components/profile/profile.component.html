@@ -2,7 +2,7 @@
 <div class="container">
      <div *ngIf="userData as users" class="us">
           <img src="{{users.photoURL}}" width="100px" height="100px">
-          <h1><strong>{{users.displayName}}</strong></h1>
+          <h1 class="text-center"><strong>{{users.displayName}}</strong></h1>
           <div class="details">
                <p class="outside">Email</p>
                <p class="inside">{{users.email}}</p>

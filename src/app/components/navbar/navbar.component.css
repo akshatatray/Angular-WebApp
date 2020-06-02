@@ -1,8 +1,22 @@
 .navbar{
-     background: linear-gradient(45deg, var(--nav2), var(--nav1));
+     background: var(--nav1);
      transition: background 0.35s linear;
-     font-weight: bolder;
-     margin-bottom: 5px;
+}
+.navbar-nav {
+     margin: auto;
+}
+.nav-item {
+     margin-right: 10px;
+     margin-left: 10px;
+     font-family: 'Prompt', sans-serif;
+}
+.nav-link:hover {
+     color: var(--theme);
+}
+.bi {
+     position: relative;
+     margin-right: 3px;
+     font-size: 16px;
 }
 .dropdown-menu{
      position: relative;
@@ -11,20 +25,12 @@
      max-width: 340px;
 }
 img{
-     margin-top: -5px;
      border-radius: 50%;
 }
 .nav-link {
-     margin-top: 5px;
-     margin-right: 20px;
+     margin-top: 0;
      margin-bottom: 0;
-     font-family: 'Roboto Condensed', sans-serif;
-     font-size: 20px;
-     color: var(--heading);
-}
-.btn {
-     margin-top: 5px;
-     font-family: 'Roboto Condensed', sans-serif;
+     color: white;
 }
 .material-icons {
      color: var(--heading);
@@ -32,15 +38,6 @@ img{
 }
 .logo {
      box-shadow: -5px 5px 15px -2px rgb(0, 0, 0);
-     margin-top: 1px;
-     padding: 3px;
+     padding: 1px;
      background: white;
-}
-.name {
-     margin-bottom: 0;
-     color: var(--heading);
-     font-family: 'Montserrat', sans-serif;
-     font-weight: 600;
-     font-style: italic;
-     margin-right: 1rem;
 }

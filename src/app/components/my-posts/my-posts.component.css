@@ -13,6 +13,14 @@
      border-radius: 0.35rem;
      box-shadow: -5px 5px 15px -5px rgb(0, 0, 0);
 }
+.title {
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+     sans-serif;
+     font-weight: 600;
+     font-size: 24px;
+     margin-bottom: 0;
+}
 .title-box {
      position: relative;
      margin-bottom: 1.5rem;
@@ -31,6 +39,14 @@
      top: 0;
      padding: 0;
 }
+.deatil {
+     font-family: 'Jost', sans-serif;
+     font-size: 18px;
+}
+.skills {
+     font-family: 'Jost', sans-serif;
+     font-size: 18px;
+}
 .btn {
      color: white;
      background: var(--btn1);
@@ -40,6 +56,10 @@
 }
 .dropdown-menu {
      position: relative;
+     background-color: var(--bg);
+}
+.form-control {
+     margin-bottom: 5px;
 }
 .fa-trash {
      font-size: 16px;
@@ -49,4 +69,12 @@
 }
 .fa-trash:hover {
      color: rgb(128, 0, 0);
+}
+.day {
+     font-weight: 300;
+     background: var(--bg2);
+     border-radius: 1rem;
+     position: relative;
+     bottom: -20px;
+     margin-bottom: 1.5rem;
 }

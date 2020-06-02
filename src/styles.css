@@ -18,28 +18,28 @@ body::-webkit-scrollbar-thumb {
      --bg1: #1e2229;
      --bg2: #16191f;
      --heading: #ffffff;
+     --heading1: #ffffff;
      --text: rgb(250, 255, 230);
      --link1: #0099ff;
      --link2: #00c382;
      --nav1: #16191f;
-     --nav2: #282c34;
      --btn1: #007bff;
      --btn2: #0060c7;
      --bd: #fae042;
      --theme: rgba(255, 143, 79, 0.883);
 }
 .light{
-     --bg: #edffe8;
-     --bg1: #dcf1d5;
-     --bg2: #cbf1bf;
-     --heading: #282c34;
+     --bg: #f8faff;
+     --bg1: #eef4ff;
+     --bg2: #e3eeff;
+     --heading: #17181b;
+     --heading1: #363941;
      --text: #0e1e30;
      --link1: #007acc;
      --link2: #00a870;
-     --nav1: rgba(0,143,104);
-     --nav2: rgb(138, 183, 86);
+     --nav1: #2979cd;
      --btn1: #0f9a65;
      --btn2: #045946;
      --bd: #402fb6;
-     --theme: rgb(19, 19, 70);
+     --theme: rgb(21, 21, 122);
 }
