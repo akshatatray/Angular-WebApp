@@ -16,12 +16,10 @@ export class ThemeChangerComponent implements OnInit {
     const body = document.getElementsByTagName('body')[0];
     const dl = body.className;
     
-    if (dl == 'dark') {
-      body.classList.replace('dark' , 'light');
-      localStorage.setItem('theme','light')
-    } else if (dl == 'light') {
+    if (dl == 'light') {
       body.classList.replace('light' , 'dark');
-      localStorage.setItem('theme','dark')  
+    } else if (dl == 'dark') {
+      body.classList.replace('dark' , 'light');
     }
   }
 
