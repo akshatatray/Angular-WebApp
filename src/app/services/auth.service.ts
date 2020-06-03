@@ -2,6 +2,7 @@ import { Injectable, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import * as firebase from 'firebase';
+import { app } from 'firebase/app';
 import { Router } from "@angular/router";
 
 @Injectable({
@@ -13,12 +14,15 @@ export class AuthService {
     public auth: AngularFireAuth,
     public afs: AngularFirestore,
     public router: Router,
-    public ngZone: NgZone
+    public ngZone: NgZone,
   ) { }
 
-  createId(email, password1, password2) {
+  async createId(name, email, password1, password2) {
     if (password1==password2) {
-      this.auth.createUserWithEmailAndPassword(email, password1);
+      await this.auth.createUserWithEmailAndPassword(email, password1)
+      return firebase.auth().currentUser.updateProfile({
+        displayName: name
+      })
     } else {
       window.alert("Passwords didn't match.");
     }
