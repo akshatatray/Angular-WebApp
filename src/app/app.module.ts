@@ -21,6 +21,7 @@ import { ThemeChangerComponent } from './components/theme-changer/theme-changer.
 import { MyPostsComponent } from './components/my-posts/my-posts.component';
 import { PostWIdComponent } from './components/post-w-id/post-w-id.component';
 import { ContactUserComponent } from './components/contact-user/contact-user.component';
+import { SocialLoginsComponent } from './components/social-logins/social-logins.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ContactUserComponent } from './components/contact-user/contact-user.com
     MyPostsComponent,
     PostWIdComponent,
     ContactUserComponent,
+    SocialLoginsComponent,
   ],
   imports: [
     BrowserModule,

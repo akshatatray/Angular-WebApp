@@ -1,16 +1,37 @@
-<form class="form-signin text-center">
-     <img class="logo" src="https://i.ibb.co/mNQcFYJ/logo.png" alt="" width="100" height="100">
-     <h1 class="display-4">Please Login</h1>
-     <input type="email" #email class="form-control" placeholder="Email address" required>
-     <input type="password" #password class="form-control" placeholder="Password" required>
-     <button type="button" class="btn btn-lg btn-block login-btn" (click)="auth.emailLogin(email.value, password.value)">Login</button>
-     <a href="#" routerLink="/register">
-          🆕 New User? Create ID.
-     </a>
-     <p class="or text-primary">Or</p>
-     <div class="social">
-          <p class="text-primary">Login with Social Network 🌏</p>
-          <img src="https://img.icons8.com/color/40/000000/google-logo.png" (click)="auth.googleLogin()"/>
-          <img src="https://img.icons8.com/fluent/43/000000/facebook-new.png" (click)="auth.facebookLogin()"/>
+<form class="form-signin">
+     <div class="text-center mb-4">
+          <img class="logo" src="https://i.ibb.co/mNQcFYJ/logo.png" alt="" width="80" height="80">
+     </div>
+     <h1 class="welcome">Welcome</h1>
+     <p class="continue">Login to Continue.</p>
+     <div class="form-label-group">
+          <input type="email" #email class="form-control" placeholder="Email address" required autofocus>
+          <label for="inputEmail">
+               <svg class="bi bi-person-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+               </svg>
+               Email address
+          </label>
+     </div>
+     <div class="form-label-group">
+          <input type="password" #password class="form-control" placeholder="Password" required>
+          <label for="inputPassword">
+               <svg class="bi bi-lock-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect width="11" height="9" x="2.5" y="7" rx="2" />
+                    <path fill-rule="evenodd" d="M4.5 4a3.5 3.5 0 1 1 7 0v3h-1V4a2.5 2.5 0 0 0-5 0v3h-1V4z" />
+               </svg>
+               Password
+          </label>
+     </div>
+     <button class="btn btn-lg btn-primary btn-block" type="button" (click)="auth.emailLogin(email.value, password.value)">Login</button>
+     <div class="text-center link">
+          <a href="#" routerLink="/register">
+               🆕 New User? Create ID.
+          </a>
      </div>
 </form>
+<div class="text-center">
+     <app-social-logins></app-social-logins>
+</div>
