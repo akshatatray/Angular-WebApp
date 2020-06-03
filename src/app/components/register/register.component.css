@@ -105,3 +105,27 @@ h1{
 .link {
      margin-top: 2.5rem;
 }
+
+@media (max-width: 420px) {
+  .link {
+    margin-bottom: 1.5rem;
+  }
+  .logo {
+    margin-bottom: 2.5rem;
+  }
+  .form-signin {
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .link {
+    margin-bottom: 1rem;
+  }
+  .logo {
+    margin-bottom: 1.5rem;
+  }
+  .form-signin {
+    margin-top: 1.85rem;
+  }
+}
