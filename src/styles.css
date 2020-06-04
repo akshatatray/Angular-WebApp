@@ -26,7 +26,7 @@ body::-webkit-scrollbar-thumb {
      --btn1: #007bff;
      --btn2: #0060c7;
      --bd: #fae042;
-     --theme: rgba(255, 143, 79, 0.883);
+     --theme: rgb(255, 133, 51);
 }
 .light{
      --bg: #f8faff;

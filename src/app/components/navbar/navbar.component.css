@@ -1,6 +1,7 @@
 .navbar{
      background: var(--nav1);
      transition: background 0.35s linear;
+     font-family: 'Jost', sans-serif;
 }
 .navbar-nav {
      margin: auto;
@@ -8,7 +9,8 @@
 .nav-item {
      margin-right: 10px;
      margin-left: 10px;
-     font-family: 'Prompt', sans-serif;
+     font-weight: 700;
+     letter-spacing: 2px;
 }
 .nav-link:hover {
      color: var(--theme);
@@ -40,4 +42,10 @@ img{
      box-shadow: -5px 5px 15px -2px rgb(0, 0, 0);
      padding: 1px;
      background: white;
+}
+
+@media (max-width:760px) {
+     .nav-item {
+          margin-bottom: 15px;
+     }
 }

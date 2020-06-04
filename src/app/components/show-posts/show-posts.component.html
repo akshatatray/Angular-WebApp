@@ -1,23 +1,25 @@
-<div *ngFor="let post of posts | async">
-  <div class="box">
-    <div class="w-100">
-      <p class="title">{{ post.title}}</p>
-    </div>
-    <div class="details">
-      <p class="outside">Details :</p>
-      <p class="inside">{{ post.detail }}</p>
-      <p class="outside">Skills Required :</p>
-      <p class="inside">{{ post.skills }}</p>
-      <p [routerLink]="['/post', post.id]" class="view text-info">
-        Contact User
-        <svg class="bi bi-arrow-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd"
-            d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
-          <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
-        </svg>
-      </p>
-      <p class="date text-center">Posted On {{ post.day }}</p>
+<div class="show-posts">
+  <div *ngFor="let post of posts | async">
+    <div class="box">
+      <div class="w-100">
+        <p class="title">{{ post.title}}</p>
+      </div>
+      <div class="details">
+        <p class="outside">Details :</p>
+        <p class="inside">{{ post.detail }}</p>
+        <p class="outside">Skills Required :</p>
+        <p class="inside">{{ post.skills }}</p>
+        <p [routerLink]="['/post', post.id]" class="view text-info">
+          Contact User
+          <svg class="bi bi-arrow-right" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z" />
+            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z" />
+          </svg>
+        </p>
+        <p class="date text-center">Posted On {{ post.day }}</p>
+      </div>
     </div>
   </div>
 </div>
