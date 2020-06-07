@@ -17,7 +17,20 @@ export class PostComponent implements OnInit {
     public afAuth: AngularFireAuth,
     public router: Router,
     public ngZone: NgZone
-  ) { }
+  ) {
+    afAuth.onAuthStateChanged((user) => {
+      if (user) {
+        if (user.emailVerified) {
+          console.log('Granted');
+        } else {
+          ngZone.run(() => {
+            router.navigate(['verify']);
+          });
+          console.log('DENIED');
+        }
+      }
+    })
+  }
 
   ngOnInit() {
   }

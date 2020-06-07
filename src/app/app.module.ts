@@ -22,6 +22,7 @@ import { MyPostsComponent } from './components/my-posts/my-posts.component';
 import { PostWIdComponent } from './components/post-w-id/post-w-id.component';
 import { ContactUserComponent } from './components/contact-user/contact-user.component';
 import { SocialLoginsComponent } from './components/social-logins/social-logins.component';
+import { VerifyComponent } from './components/verify/verify.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { SocialLoginsComponent } from './components/social-logins/social-logins.
     PostWIdComponent,
     ContactUserComponent,
     SocialLoginsComponent,
+    VerifyComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,12 +9,13 @@ import { PostComponent } from './components/post/post.component';
 import { MyPostsComponent } from './components/my-posts/my-posts.component';
 import { PostWIdComponent } from './components/post-w-id/post-w-id.component';
 import { ContactUserComponent } from './components/contact-user/contact-user.component';
+import { VerifyComponent } from './components/verify/verify.component';
 
 import { AngularFireAuthGuard, redirectUnauthorizedTo, redirectLoggedInTo, emailVerified } from '@angular/fire/auth-guard';
 import { RegisterComponent } from './components/register/register.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
-const redirectLoggedInToHome = () => redirectLoggedInTo(['home']);
+const redirectLoggedInToHome = () =>  redirectLoggedInTo(['home']);
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'post/:id', component: PostWIdComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
   { path: 'user/:id', component: ContactUserComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
   { path: 'my/posts', component: MyPostsComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
+  { path: 'verify', component: VerifyComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
 ];
 
 @NgModule({

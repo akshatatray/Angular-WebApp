@@ -2,7 +2,6 @@ import { Injectable, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import * as firebase from 'firebase';
-import { app } from 'firebase/app';
 import { Router } from "@angular/router";
 
 @Injectable({
@@ -20,41 +19,33 @@ export class AuthService {
   async createId(name, email, password1, password2) {
     if (password1==password2) {
       await this.auth.createUserWithEmailAndPassword(email, password1)
-      return firebase.auth().currentUser.updateProfile({
+      await firebase.auth().currentUser.updateProfile({
         displayName: name
+      });
+      this.auth.onAuthStateChanged((user) => {
+        user.sendEmailVerification();
+        console.log('sent to',user.email);
       })
     } else {
       window.alert("Passwords didn't match.");
     }
   }
 
-  emailLogin(email, password) {
-    this.auth.signInWithEmailAndPassword(email, password);
-    this.auth.onAuthStateChanged((user) => {
-      if (user) {
-        const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
-        const userData = {
-          uid: user.uid,
-          email: user.email,
-          displayName: user.displayName,
-          photoURL: user.photoURL,
-          emailVerified: user.emailVerified,
-        }
-        userRef.set(userData, {
-          merge: true
-        }).then((result) => {
-          this.ngZone.run(() => {
-            if (user.emailVerified) {
-            this.router.navigate(['home']);
-          } else {
-            this.router.navigate(['login'])
-          }
-          });
-        }).catch((error) => {
-          window.alert(error.message);
-        });
+  async emailLogin(email, password) {
+    await this.auth.signInWithEmailAndPassword(email, password);
+    await this.auth.onAuthStateChanged((user) => {
+      const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.uid}`);
+      const userData = {
+        uid: user.uid,
+        email: user.email,
+        displayName: user.displayName,
+        photoURL: user.photoURL,
+        emailVerified: user.emailVerified,
       }
-    })
+      return userRef.set(userData, {
+        merge: true
+      });
+    });
   }
   googleLogin() {
     this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())

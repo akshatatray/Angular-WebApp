@@ -1,0 +1,29 @@
+.box {
+     border-radius: 0.25rem;
+     background: var(--bg1);
+     transition: background 0.25s linear;
+     height: 40vh;
+     width: 80vw;
+     max-height: 400px;
+     max-width: 400px;
+     margin: auto;
+     margin-top: 10rem;
+     padding: 80px 20px;
+     color: var(--heading);
+     box-shadow: -2px 3px 10px -5px rgba(0,0,0);
+}
+h1 {
+     font-family: 'Jost', sans-serif;
+     -webkit-font-smoothing: subpixel-antialiased;
+     font-weight: 800;
+     font-size: 30px;
+     margin-bottom: 0;
+}
+h2 {
+     font-family: 'Jost', sans-serif;
+     -webkit-font-smoothing: subpixel-antialiased;
+     color: #757575;
+     font-weight: 800;
+     font-size: 24px;
+     margin-bottom: 0;
+}

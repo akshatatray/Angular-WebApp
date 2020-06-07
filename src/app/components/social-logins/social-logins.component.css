@@ -2,6 +2,9 @@
      width: 100%;
      margin-top: 2rem;
 }
+.text {
+     color: var(--link1);
+}
 img {
      margin: 0.5rem;
      margin-top: 0;

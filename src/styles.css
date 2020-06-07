@@ -20,7 +20,7 @@ body::-webkit-scrollbar-thumb {
      --heading: #ffffff;
      --heading1: #ffffff;
      --text: rgb(250, 255, 230);
-     --link1: #0099ff;
+     --link1: #B3E0FF;
      --link2: #00c382;
      --nav1: #16191f;
      --btn1: #007bff;
@@ -29,13 +29,13 @@ body::-webkit-scrollbar-thumb {
      --theme: rgb(255, 133, 51);
 }
 .light{
-     --bg: #f8faff;
+     --bg: #fbfcff;
      --bg1: #eef4ff;
      --bg2: #e3eeff;
      --heading: #17181b;
      --heading1: #363941;
      --text: #0e1e30;
-     --link1: #007acc;
+     --link1: #00406B;
      --link2: #00a870;
      --nav1: #2979cd;
      --btn1: #0f9a65;

@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable, merge } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 export interface Post {
   title: string;
@@ -33,7 +34,22 @@ export class MyPostsComponent implements OnInit {
   constructor(
     private afs: AngularFirestore,
     private afAuth: AngularFireAuth,
-  ) {}
+    public router: Router,
+    public ngZone: NgZone
+  ) {
+    afAuth.onAuthStateChanged((user) => {
+      if (user) {
+        if (user.emailVerified) {
+          console.log('Granted');
+        } else {
+          ngZone.run(() => {
+            router.navigate(['verify']);
+          });
+          console.log('DENIED');
+        }
+      }
+    })
+  }
 
   ngOnInit(): void {
     this.afAuth.onAuthStateChanged((user) => {
