@@ -13,12 +13,16 @@
 h1{
   color: var(--heading);
   font-family: 'Jost', sans-serif;
+  text-align: center;
   margin-bottom: 0;
+  letter-spacing: 3px;
 }
 
 .continue {
   color: var(--heading);
   font-family: 'Jost', sans-serif;
+  text-align: center;
+  letter-spacing: 3px;
 }
 
 .form-label-group {

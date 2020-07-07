@@ -1,53 +1,79 @@
-.inside {
-     margin-bottom: 0.7rem;
-     font-family: 'Jost', sans-serif;
-     font-size: 18px;
-}
-.outside {
-     margin-bottom: 0;
-     margin-top: 1rem;
-     font-size: 20px;
-     font-weight: 500;
-     letter-spacing: 2px;
-     color: var(--heading1);
+.jobCard {
+     position: relative;
+     width: 425px;
+     height: 325px;
+     background: var(--bg1);
+     margin: auto;
+     padding: 25px;
+     box-shadow: 3px 3px 20px -15px black;
 }
 .title {
-     font-family: 'Jost', sans-serif;
-     -webkit-font-smoothing: subpixel-antialiased;
-     font-weight: 800;
-     font-size: 28px;
-     margin-bottom: 0;
+     color: var(--text);
+     font-size: 30px;
+     margin-bottom: 20px;
+     margin-top: 10px;
+     max-height: 50px;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     background: var(--bg);
+     padding-left: 10px;
+     border-radius: 0.3rem;
 }
-.box {
-     position: relative;
-     border-radius: 0.25rem;
-     background: var(--bg1);
-     transition: background 0.25s linear;
-     width: 100%;
-     max-width: 500px;
-     margin: auto;
-     margin-bottom: 1rem;
-     padding: 20px;
-     color: var(--heading);
-     box-shadow: -2px 3px 10px -5px rgba(0,0,0);
+.detail {
+     color: var(--text);
+     font-size: 16px;
+     letter-spacing: 1px;
+     max-height: 55px;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     background: var(--bg);
+     padding-left: 10px;
+     border-radius: 0.3rem;
 }
-.details {
-     margin-top: 1.5rem;
+.skills {
+     color: var(--text);
+     font-size: 16px;
+     letter-spacing: 2px;
+     max-height: 55px;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     background: var(--bg);
+     padding-left: 10px;
+     border-radius: 0.3rem;
 }
-.date {
-     font-weight: 300;
-     background: var(--bg2);
-     border-radius: 1rem;
-     position: relative;
-     bottom: -20px;
+.avatar {
+     position: absolute;
+     width: 30px;
+     border-radius: 50%;
+     top: 25px;
+     left: 115px;
 }
-.view {
-     position: relative;
-     margin: 0;
+.contact {
+     color: var(--text);
+     position: absolute;
+     bottom: 25px;
+     width: 350px;
+     border-radius: 0.3rem;
+     border: 2px solid var(--contrast);
+     background: none;
+     font-family: Consolas;
+     font-size: 16px;
+     letter-spacing: 1px;
+     padding: 7.5px 0px;
+     box-shadow: 2px 2px 10px -6px black;
+     transition: all 0.2s ease-out;
 }
-
-@media (max-width:420px) {
-     .box {
-          max-width: 370px;
-     }
+.contact:hover {
+     background: var(--contrast);
+     color: var(--bg);
+}
+span {
+     color: var(--text);
+     line-height: 30px;
+}
+.name {
+     margin-left: 40px;
 }

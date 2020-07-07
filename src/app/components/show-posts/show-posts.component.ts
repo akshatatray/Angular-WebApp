@@ -10,6 +10,8 @@ export interface Post {
   day: string;
   time: any;
   user: string;
+  name: string;
+  userPhoto: string;
 }
 export interface PostId extends Post {
   id: string;

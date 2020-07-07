@@ -59,6 +59,8 @@ export class PostComponent implements OnInit {
         const d = new Date();
         const n = d.getDay();
         const uid = user.uid;
+        const name = user.displayName;
+        const userPhoto = user.photoURL;
         const postRef: AngularFirestoreCollection<any> = this.afs.collection(`posts`);
         const postData = {
           title: title,
@@ -66,7 +68,9 @@ export class PostComponent implements OnInit {
           skills: skills,
           time: firebase.firestore.Timestamp.fromDate(new Date()),
           day: this.day(n),
-          user: uid
+          user: uid,
+          name: name,
+          userPhoto: userPhoto,
         }
         console.log(uid);
         postRef.add(postData).then((result) => {
